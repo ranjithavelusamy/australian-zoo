@@ -1,0 +1,213 @@
+/* ReptilesPage.module.css - Enhanced styling for Reptiles page */
+.reptilesPage {
+  width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  display: flex;
+  min-height: calc(100vh - 300px);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-sm);
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 1300px;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.groupInfo {
+  padding: 1rem 0;
+}
+
+.groupInfo h1 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.groupInfo h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #9ccd7e; /* Green for reptiles theme */
+}
+
+.infoCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 1.75rem;
+  box-shadow: var(--box-shadow-sm);
+  margin-bottom: 2rem;
+  border-left: 4px solid #9ccd7e; /* Green for reptiles theme */
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.infoIcon {
+  font-size: 2.75rem;
+  margin-right: 1rem;
+  color: #9ccd7e; /* Green for reptiles theme */
+}
+
+.infoStats {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoStats span:first-child {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.infoStats span:last-child {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.infoCard p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+.infoCard p:last-child {
+  margin-bottom: 0;
+}
+
+.galleryTitle {
+  color: var(--color-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.imageItem {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.imageItem:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-md);
+}
+
+.imageItem img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageItem:hover img {
+  transform: scale(1.05);
+}
+
+.imageItem span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 1rem 0.75rem 0.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.animalDetailPage {
+  padding: 1rem 0;
+}
+
+.loadingScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateX(-5px);
+}
+
+@media (max-width: 992px) {
+  .imageGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .groupInfo h1 {
+    font-size: 1.75rem;
+  }
+  
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .imageItem img {
+    height: 220px;
+  }
+}

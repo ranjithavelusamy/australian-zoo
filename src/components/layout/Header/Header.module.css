@@ -1,0 +1,256 @@
+/* Header.module.css */
+.header {
+  background-color:#896008;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2e7d32;
+  transition: transform 0.2s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.02);
+}
+
+.logoIcon {
+  fill: #3d1703;
+  margin-right: 0.75rem;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.navItem {
+  margin-left: 0.5rem;
+}
+
+.navLink {
+  display: inline-block;
+  text-decoration: none;
+  color: #010101;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: #2e7d32;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover {
+  color:  #020202;
+  background-color: rgba(46, 125, 50, 0.05);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navLink.active {
+  color: rgb(189, 23, 128);
+  background-color: #0a0c0a;
+  font-weight: 600;
+}
+
+.navLink.active::after {
+  display: none;
+}
+
+.ctaLink {
+  background-color: rgba(46, 125, 50, 0.1);
+  border: 1px solid rgba(46, 125, 50, 0.2);
+  color: #2e7d32;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.ctaLink:hover {
+  background-color: rgba(46, 125, 50, 0.15);
+  border-color: rgba(46, 125, 50, 0.3);
+}
+
+.ctaLink.active {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 101;
+  padding: 8px;
+}
+
+.menuBar {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.menuBar::before,
+.menuBar::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.menuBar::before {
+  top: -8px;
+}
+
+.menuBar::after {
+  bottom: -8px;
+}
+
+.menuBar.open {
+  background-color: transparent;
+}
+
+.menuBar.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menuBar.open::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Scroll behavior */
+@media (min-width: 769px) {
+  .header.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: block;
+  }
+  
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    padding: 5rem 1.5rem 2rem;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  
+  .navigation.open {
+    right: 0;
+  }
+  
+  .navList {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navItem {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  
+  .ctaLink {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Add an overlay when mobile menu is open */
+.navigation.open::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}

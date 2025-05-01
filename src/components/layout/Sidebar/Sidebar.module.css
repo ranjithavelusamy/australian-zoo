@@ -1,0 +1,141 @@
+/* Sidebar.module.css */
+.sidebar {
+  width: 250px;
+  background-color:#896008;
+  border-right: 1px solid #de3891;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(4, 4, 4, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  padding: 1.5rem 1.5rem 0.75rem;
+}
+
+.sidebarHeader h2 {
+  color:deeppink;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid dee;
+  padding-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 0.75rem 1rem 1.5rem;
+  overflow-y: auto;
+}
+
+.animalList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.animalItem {
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.animalLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #080808;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.animalLink:hover {
+  background-color: #770854;
+  color: #2e7d32;
+}
+
+.animalItem.active .animalLink {
+  background-color: #010501;
+  color: #de3891;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(113, 25, 185, 0.2);
+}
+
+.animalName {
+  margin-left: 0.25rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .sidebarHeader {
+    padding: 1rem 1rem 0.5rem;
+  }
+  
+  .sidebarNav {
+    padding: 0.5rem 1rem 1rem;
+  }
+  
+  .animalList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .animalItem {
+    margin-bottom: 0;
+  }
+  
+  .animalLink {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Animation for hover and active states */
+.animalLink {
+  position: relative;
+  overflow: hidden;
+}
+
+.animalLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #2e7d32;
+  transition: width 0.3s ease;
+}
+
+.animalLink:hover::after {
+  width: 100%;
+}
+
+.animalItem.active .animalLink::after {
+  display: none;
+}
+
+/* Optional: Add a subtle animation for when items are clicked */
+@keyframes clickEffect {
+  0% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+.animalLink:active {
+  animation: clickEffect 0.2s ease;
+}
