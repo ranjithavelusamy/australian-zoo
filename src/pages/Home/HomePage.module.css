@@ -28,15 +28,16 @@
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
+  text-align: center;
 }
 
 .welcome h1::after {
   content: "";
-  position: absolute;
+  position:absolute;
   bottom: 0;
   left: 0;
-  width: 80px;
-  height: 3px;
+  width: 430px;
+ line-height-step:unset;
   background-color: var(--color-secondary);
 }
 
@@ -51,6 +52,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  padding: 1.75rem;
   margin-top: 2.5rem;
 }
 
@@ -61,7 +63,7 @@
   box-shadow: var(--box-shadow-sm);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 4px solid var(--color-primary);
+  border-top: 5px solid var(--color-primary);
 }
 
 .categoryCard:hover {
@@ -84,7 +86,7 @@
   display: inline-block;
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 0.65rem 1.25rem;
+  padding: 0.9rem 1.25rem;
   border-radius: 30px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -126,7 +128,7 @@
   }
   
   .categoryCard {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }
 .fadeIn {

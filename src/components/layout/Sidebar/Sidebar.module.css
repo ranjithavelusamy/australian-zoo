@@ -1,9 +1,9 @@
 /* Sidebar.module.css */
 .sidebar {
   width: 250px;
-  background-color:#896008;
-  border-right: 1px solid #de3891;
-  height: 100%;
+  background-color:#7b5502;
+  border-right: 1px solid #820548;
+  height:1;
   box-shadow: 0 1px 3px rgba(4, 4, 4, 0.05);
   display: flex;
   flex-direction: column;
@@ -11,13 +11,15 @@
 
 .sidebarHeader {
   padding: 1.5rem 1.5rem 0.75rem;
+  text-align: center;
+  
 }
 
 .sidebarHeader h2 {
-  color:deeppink;
+  color:rgb(78, 6, 44);
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 900;
   border-bottom: 2px solid dee;
   padding-bottom: 0.75rem;
   letter-spacing: 0.5px;
@@ -31,8 +33,8 @@
 
 .animalList {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 12px;
+  margin: 35px;
 }
 
 .animalItem {

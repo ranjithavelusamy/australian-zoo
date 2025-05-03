@@ -1,8 +1,8 @@
 /* src/index.css - Updated with better base styles */
 :root {
   --color-primary:#bd05ab;
-  --color-primary-dark: hsl(37, 86%, 39%) ;
-  --color-secondary: #f7b32b;
+  --color-primary-dark: rgb(37, 86%, 39%) ;
+  --color-secondary: #6a4a04;
   --color-text: #080808;
   --color-text-light: #e7dfdf;
   --color-background: #3d0303dc;

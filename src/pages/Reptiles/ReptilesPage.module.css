@@ -42,9 +42,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 80px;
+  width: 300px;
   height: 3px;
-  background-color: #9ccd7e; /* Green for reptiles theme */
+  background-color: #2b14b0; /* Green for reptiles theme */
 }
 
 .infoCard {

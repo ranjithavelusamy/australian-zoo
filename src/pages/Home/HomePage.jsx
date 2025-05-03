@@ -51,8 +51,8 @@ const HomePage = () => {
             <div className={styles.welcome}>
               <h1>Welcome to Australia Zoo</h1>
               <p>
-                Discover the amazing wildlife of Australia through our fascinating exhibition 
-                featuring mammals, birds, and reptiles from across the continent. 
+                Discover the amazing wildlife of Australia through our fascinating exhibition featuring mammals, birds, and reptiles from across the continent. 
+                
               </p>
               <p>
                 Explore the unique ecosystems and learn about the incredible adaptations 

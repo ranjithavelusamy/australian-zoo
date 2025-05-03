@@ -1,6 +1,6 @@
 /* Header.module.css */
 .header {
-  background-color:#896008;
+  background-color:#7b5502;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.75rem 0;
   position: sticky;
@@ -107,20 +107,20 @@
 }
 
 .ctaLink {
-  background-color: rgba(46, 125, 50, 0.1);
+  background-color: rgba(46, 125, 50, 0.2);
   border: 1px solid rgba(46, 125, 50, 0.2);
-  color: #2e7d32;
+  color: black;
   margin-left: 0.5rem;
   font-weight: 600;
 }
 
 .ctaLink:hover {
-  background-color: rgba(46, 125, 50, 0.15);
-  border-color: rgba(46, 125, 50, 0.3);
+  background-color: rgba(11, 11, 11, 0.918);
+  border-color: rgba(125, 46, 96, 0.3);
 }
 
 .ctaLink.active {
-  background-color: #2e7d32;
+  background-color:#896008;
   border-color: #2e7d32;
 }
 
